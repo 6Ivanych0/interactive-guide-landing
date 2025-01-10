@@ -1,0 +1,40 @@
+css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.content {
+    height: 3000px; /* Для демонстрации скроллинга */
+    padding: 20px;
+}
+.guide {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 150px;
+    height: 300px;
+    background: url('https://via.placeholder.com/150') no-repeat center/contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.interaction {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.guide:hover + .interaction {
+    display: block;
+}
